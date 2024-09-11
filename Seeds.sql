@@ -10,7 +10,12 @@ VALUES
 ('The Hobbit', 'J.R.R. Tolkien', '9780547928227', '1937-09-21', 'Fantasy', 'Shelf 7', 'Available'),
 ('Frankenstein', 'Mary Shelley', '9780486282114', '1818-01-01', 'Gothic', 'Shelf 8', 'Borrowed'),
 ('Moby-Dick', 'Herman Melville', '9781503280786', '1851-10-18', 'Adventure', 'Shelf 9', 'Available'),
-('Les Misérables', 'Victor Hugo', '9780451419439', '1862-01-01', 'Historical', 'Shelf 10', 'Borrowed');
+('Les Misérables', 'Victor Hugo', '9780451419439', '1862-01-01', 'Historical', 'Shelf 10', 'Borrowed'),
+('The Art of War', 'Sun Tzu', '9781590302255', '1950-01-01', 'Philosophy', 'Shelf 11', 'Available'),
+('The Secret History', 'Donna Tartt', '9780375402305', '1992-09-01', 'Thriller', 'Shelf 12', 'Borrowed'),
+('The Girl with the Dragon Tattoo', 'Stieg Larsson', '9780307454546', '2005-08-01', 'Mystery', 'Shelf 13', 'Available'),
+('The Da Vinci Code', 'Dan Brown', '9780307474278', '2003-03-18', 'Thriller', 'Shelf 14', 'Borrowed'),
+('Gone Girl', 'Gillian Flynn', '9780307588371', '2012-06-05', 'Thriller', 'Shelf 15', 'Available');
 -- Insert into Borrowers
 INSERT INTO Borrowers (FirstName, LastName, Email, DateOfBirth, MembershipDate)
 VALUES
@@ -36,4 +41,9 @@ VALUES
 (7, 7, '2024-03-01', '2024-04-01', '2024-03-31'),    -- Returned one day early
 (8, 8, '2024-07-01', '2024-08-01', '2024-08-01'),    -- Returned on the due date
 (9, 9, '2024-02-01', '2024-03-01', NULL),            -- Currently borrowed
-(10, 10, '2024-05-01', '2024-06-01', '2024-06-05');  -- Returned 4 days late
+(10, 10, '2024-05-01', '2024-06-01', '2024-06-05'),  -- Returned 4 days late
+(3, 1, '2024-09-10', '2024-09-24', NULL),      -- The Great Gatsby (Not yet returned)
+(7, 1, '2024-09-10', '2024-09-24', '2024-09-15'), -- The Hobbit (Returned early)
+(9, 1, '2024-09-10', '2024-09-24', '2024-09-22'), -- Moby-Dick (Returned on time)
+(11, 1, '2024-09-10', '2024-09-24', NULL);      -- The Art of War (Not yet returned)
+
